@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    container_name: wealth-io-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: sh -c "npm install && npm run dev"
+
+  tika:
+    image: apache/tika:latest
+    container_name: wealth-io-tika
+    ports:
+      - "9998:9998"
+    restart: unless-stopped
+
+volumes:
+  tika_data:

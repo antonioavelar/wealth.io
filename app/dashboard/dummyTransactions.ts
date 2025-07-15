@@ -1,0 +1,43 @@
+// Dummy transaction data for development
+export const dummyTransactions = [
+  {
+    id: "1",
+    assetSymbol: "AAPL",
+    assetName: "Apple Inc.",
+    assetType: "stock",
+    type: "buy",
+    quantity: 10,
+    price: 150,
+    date: "2024-06-01T10:00:00Z",
+  },
+  {
+    id: "2",
+    assetSymbol: "BTC",
+    assetName: "Bitcoin",
+    assetType: "crypto",
+    type: "deposit",
+    quantity: 0.5,
+    price: 30000,
+    date: "2024-06-02T12:00:00Z",
+  },
+  {
+    id: "3",
+    assetSymbol: "AAPL",
+    assetName: "Apple Inc.",
+    assetType: "stock",
+    type: "sell",
+    quantity: 2.5,
+    price: 155,
+    date: "2024-06-10T09:00:00Z",
+  },
+  {
+    id: "4",
+    assetSymbol: "USD",
+    assetName: "US Dollar",
+    assetType: "cash",
+    type: "deposit",
+    quantity: 1000,
+    price: 1,
+    date: "2024-06-15T15:00:00Z",
+  },
+];
